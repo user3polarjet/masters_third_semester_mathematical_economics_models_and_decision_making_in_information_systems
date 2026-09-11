@@ -12,6 +12,7 @@ I have one or more PDF files that need to be converted to Markdown (.md, same ba
   6. Write the result to <same-basename>.md next to the source PDF.
   7. create a separate markdown per page
   8. In the add concatanete those markdowns into single document ( if some table, or formula or other such element was split accorss pages, then merge them)
+  9. DO NOT REMOVE ANY INTERMEDIATE ALGERBA IN ANY FORMULA.
 
   After conversion — verify it:
   1. Re-read both the PDF and the newly written .md in full.
