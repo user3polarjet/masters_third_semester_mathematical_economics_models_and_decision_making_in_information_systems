@@ -1,32 +1,30 @@
-import subprocess
 import sys
 import pathlib
 import os
+import asyncio
 
 SCRIPT_PATH = pathlib.Path(os.path.abspath(__file__))
 SCRIPT_DIR = SCRIPT_PATH.parent
 
 PDF_PATH = SCRIPT_DIR.parent / "КОНСПЕКТ ЛЕКЦІЯ.pdf"
-BUILD_DIR = SCRIPT_DIR.parent / "build" / PDF_PATH.name
+BUILD_DIR = SCRIPT_DIR.parent / "build" / PDF_PATH.stem
 DPI = 150
 
 
-def main():
+async def main():
     if not PDF_PATH.exists():
         sys.exit(f"PDF not found: {PDF_PATH}")
 
     BUILD_DIR.mkdir(parents=True, exist_ok=True)
 
-    subprocess.run(
-        [
-            "pdftoppm",
-            "-png",
-            "-r", str(DPI),
-            str(PDF_PATH),
-            str(BUILD_DIR / "page"),
-        ],
-        check=True,
+    process = await asyncio.subprocess.create_subprocess_exec(
+        "pdftoppm",
+        "-png",
+        "-r", str(DPI),
+        str(PDF_PATH),
+        str(BUILD_DIR / "page"),
     )
+    await process.communicate()
 
     # pdftoppm pads page numbers inconsistently across versions; normalize to page-001.png etc.
     for f in sorted(BUILD_DIR.glob("page-*.png")):
@@ -40,4 +38,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())
