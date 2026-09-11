@@ -241,7 +241,7 @@ $ M P L = a_0 a_1 X_1^(a_1 - 1) X_2^(a_2) = 0.794288 dot X_1^(-0.708173) dot X_2
 $ M P K = a_0 a_2 X_1^(a_1) X_2^(a_2 - 1) = 1.679802 dot X_1^(0.291827) dot X_2^(-0.382829). $
 
 #figure(
-  image("fig1_mpl_mpk.png", width: 85%),
+  image("fig1_mpl_mpk.svg", width: 85%),
   caption: [Гранична продуктивність праці (MPL) та гранична фондовіддача (MPK) за періодами]
 )
 
@@ -262,7 +262,7 @@ $ E = (macron(Y) \/ macron(X)_1)^alpha dot (macron(Y) \/ macron(X)_2)^(1 - alpha
 де $alpha = a_1 \/ (a_1 + a_2)$, а риска над змінною означає її відношення до значення базового року.
 
 #figure(
-  image("fig2_efficiency_scale.png", width: 85%),
+  image("fig2_efficiency_scale.svg", width: 85%),
   caption: [Ефективність (E) та масштаб (M) виробництва за періодами відносно базового (першого) року]
 )
 
@@ -275,7 +275,7 @@ $ E = (macron(Y) \/ macron(X)_1)^alpha dot (macron(Y) \/ macron(X)_2)^(1 - alpha
 $ X_2 = (95 \/ (2.721777 dot X_1^(0.291827)))^(1 \/ 0.617171). $
 
 #figure(
-  image("fig3_isoquant.png", width: 75%),
+  image("fig3_isoquant.svg", width: 75%),
   caption: [Ізокванта виробничої функції для $Y = 95$]
 )
 
@@ -288,14 +288,14 @@ $ X_2 = (95 \/ (2.721777 dot X_1^(0.291827)))^(1 \/ 0.617171). $
 $ X_2 = sqrt(a_1 \/ a_2 dot X_1^2 + a), quad a = L_0^2 - a_1 \/ a_2 dot K_0^2 = 2843.45. $
 
 #figure(
-  image("fig4_isocline.png", width: 75%),
+  image("fig4_isocline.svg", width: 75%),
   caption: [Ізокліналь виробничої функції, що проходить через точку (40; 60)]
 )
 
 == Ізокванта та ізокліналь на одному графіку
 
 #figure(
-  image("fig5_isoquant_isocline.png", width: 75%),
+  image("fig5_isoquant_isocline.svg", width: 75%),
   caption: [Ізокванта для $Y=95$ та ізокліналь через точку (40; 60), що перетинаються поблизу точки $(35.3; 58.6)$]
 )
 

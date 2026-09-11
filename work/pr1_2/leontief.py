@@ -78,7 +78,7 @@ plt.title("Графічне розв'язання характеристично
 plt.legend()
 plt.grid(True, alpha=0.3)
 plt.tight_layout()
-plt.savefig(SCRIPT_DIR / "fig1_characteristic_equation.png", dpi=150)
+plt.savefig(SCRIPT_DIR / "fig1_characteristic_equation.svg")
 plt.close()
 print(f"Корені характеристичного рівняння: {np.sort(roots)}")
 print(f"Найбільший корінь = {roots.max():.6f} < 1: {roots.max() < 1}")

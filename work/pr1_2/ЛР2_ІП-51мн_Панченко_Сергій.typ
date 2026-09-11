@@ -156,7 +156,7 @@ $ (E-A)^(-1) = mat(2.142857, 0.952381, 0.714286; 1.071429, 2.142857, 0.357143; 0
 Корені характеристичного рівняння $|lambda E - A| = 0$: $lambda_1 = -0.0956$, $lambda_2 = 0.1740$, $lambda_3 = 0.7215$.
 
 #figure(
-  image("fig1_characteristic_equation.png", width: 85%),
+  image("fig1_characteristic_equation.svg", width: 85%),
   caption: [Графічне розв'язання характеристичного рівняння для матриці $A$ варіанта 6]
 )
 
