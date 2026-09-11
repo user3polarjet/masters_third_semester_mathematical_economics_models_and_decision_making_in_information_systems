@@ -1,0 +1,466 @@
+{
+  "block2": {
+    "R": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        1
+      ]
+    ],
+    "properties": {
+      "reflexive": true,
+      "antireflexive": false,
+      "symmetric": false,
+      "asymmetric": false,
+      "antisymmetric": true,
+      "transitive": false
+    },
+    "R2": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        1,
+        1
+      ]
+    ],
+    "R_inv": [
+      [
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        1,
+        1
+      ]
+    ],
+    "R_comp": [
+      [
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    ],
+    "R_strict": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ]
+    ],
+    "greatest": [
+      3
+    ],
+    "least": [],
+    "maximal": [
+      3
+    ],
+    "minimal": [
+      1
+    ]
+  },
+  "block3": {
+    "names": [
+      "Моделі математичної економіки",
+      "Технології великих даних",
+      "Управління ІТ-проєктами",
+      "Розподілені системи",
+      "Машинне навчання",
+      "Кібербезпека"
+    ],
+    "codes": [
+      "a1",
+      "a2",
+      "a3",
+      "a4",
+      "a5",
+      "a6"
+    ],
+    "M": [
+      [
+        0,
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        -1,
+        -1,
+        0,
+        -1,
+        -1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1,
+        0,
+        -1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1,
+        1,
+        0,
+        1
+      ],
+      [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        0
+      ]
+    ],
+    "row_sums": [
+      -1,
+      5,
+      -3,
+      1,
+      3,
+      -5
+    ],
+    "ranking": [
+      {
+        "rank": 1,
+        "code": "a2",
+        "name": "Технології великих даних",
+        "sum": 5
+      },
+      {
+        "rank": 2,
+        "code": "a5",
+        "name": "Машинне навчання",
+        "sum": 3
+      },
+      {
+        "rank": 3,
+        "code": "a4",
+        "name": "Розподілені системи",
+        "sum": 1
+      },
+      {
+        "rank": 4,
+        "code": "a1",
+        "name": "Моделі математичної економіки",
+        "sum": -1
+      },
+      {
+        "rank": 5,
+        "code": "a3",
+        "name": "Управління ІТ-проєктами",
+        "sum": -3
+      },
+      {
+        "rank": 6,
+        "code": "a6",
+        "name": "Кібербезпека",
+        "sum": -5
+      }
+    ],
+    "triads": [
+      {
+        "triple": "a1,a2,a3",
+        "cond": "a1<a2, a2>a3",
+        "checkable": false,
+        "conclusion": "",
+        "mark": ""
+      },
+      {
+        "triple": "a1,a2,a4",
+        "cond": "a1<a2, a2>a4",
+        "checkable": false,
+        "conclusion": "",
+        "mark": ""
+      },
+      {
+        "triple": "a1,a2,a5",
+        "cond": "a1<a2, a2>a5",
+        "checkable": false,
+        "conclusion": "",
+        "mark": ""
+      },
+      {
+        "triple": "a1,a2,a6",
+        "cond": "a1<a2, a2>a6",
+        "checkable": false,
+        "conclusion": "",
+        "mark": ""
+      },
+      {
+        "triple": "a1,a3,a4",
+        "cond": "a1>a3, a3<a4",
+        "checkable": false,
+        "conclusion": "",
+        "mark": ""
+      },
+      {
+        "triple": "a1,a3,a5",
+        "cond": "a1>a3, a3<a5",
+        "checkable": false,
+        "conclusion": "",
+        "mark": ""
+      },
+      {
+        "triple": "a1,a3,a6",
+        "cond": "a1>a3, a3>a6",
+        "checkable": true,
+        "conclusion": "a1>a6, факт a1>a6",
+        "mark": "+"
+      },
+      {
+        "triple": "a1,a4,a5",
+        "cond": "a1<a4, a4<a5",
+        "checkable": true,
+        "conclusion": "a1<a5, факт a1<a5",
+        "mark": "+"
+      },
+      {
+        "triple": "a1,a4,a6",
+        "cond": "a1<a4, a4>a6",
+        "checkable": false,
+        "conclusion": "",
+        "mark": ""
+      },
+      {
+        "triple": "a1,a5,a6",
+        "cond": "a1<a5, a5>a6",
+        "checkable": false,
+        "conclusion": "",
+        "mark": ""
+      },
+      {
+        "triple": "a2,a3,a4",
+        "cond": "a2>a3, a3<a4",
+        "checkable": false,
+        "conclusion": "",
+        "mark": ""
+      },
+      {
+        "triple": "a2,a3,a5",
+        "cond": "a2>a3, a3<a5",
+        "checkable": false,
+        "conclusion": "",
+        "mark": ""
+      },
+      {
+        "triple": "a2,a3,a6",
+        "cond": "a2>a3, a3>a6",
+        "checkable": true,
+        "conclusion": "a2>a6, факт a2>a6",
+        "mark": "+"
+      },
+      {
+        "triple": "a2,a4,a5",
+        "cond": "a2>a4, a4<a5",
+        "checkable": false,
+        "conclusion": "",
+        "mark": ""
+      },
+      {
+        "triple": "a2,a4,a6",
+        "cond": "a2>a4, a4>a6",
+        "checkable": true,
+        "conclusion": "a2>a6, факт a2>a6",
+        "mark": "+"
+      },
+      {
+        "triple": "a2,a5,a6",
+        "cond": "a2>a5, a5>a6",
+        "checkable": true,
+        "conclusion": "a2>a6, факт a2>a6",
+        "mark": "+"
+      },
+      {
+        "triple": "a3,a4,a5",
+        "cond": "a3<a4, a4<a5",
+        "checkable": true,
+        "conclusion": "a3<a5, факт a3<a5",
+        "mark": "+"
+      },
+      {
+        "triple": "a3,a4,a6",
+        "cond": "a3<a4, a4>a6",
+        "checkable": false,
+        "conclusion": "",
+        "mark": ""
+      },
+      {
+        "triple": "a3,a5,a6",
+        "cond": "a3<a5, a5>a6",
+        "checkable": false,
+        "conclusion": "",
+        "mark": ""
+      },
+      {
+        "triple": "a4,a5,a6",
+        "cond": "a4<a5, a5>a6",
+        "checkable": false,
+        "conclusion": "",
+        "mark": ""
+      }
+    ],
+    "total_triads": 20,
+    "checkable": 6,
+    "violations": 0
+  }
+}

@@ -1,12 +1,25 @@
 """
 Практична робота №1 (розділ 2) — Варіант 6
 Методи прийняття рішень на основі бінарних відношень та попарних порівнянь
+
+Усі обчислені результати також зберігаються у data.json, який читає
+безпосередньо Typst-звіт — це виключає розбіжності між текстом звіту
+та фактичним виводом скрипта.
 """
 import itertools
+import json
+import pathlib
 
 import numpy as np
 
 np.set_printoptions(linewidth=120)
+
+SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
+
+
+def mat(a):
+    """numpy-масив -> список списків int, придатний для JSON."""
+    return np.asarray(a).astype(int).tolist()
 
 
 def analyze_relation(R, label):
@@ -82,6 +95,28 @@ R6 = np.array([
 
 result6 = analyze_relation(R6, "Варіант 6")
 
+data = {
+    "block2": {
+        "R": mat(R6),
+        "properties": {
+            "reflexive": result6["reflexive"],
+            "antireflexive": result6["antireflexive"],
+            "symmetric": result6["symmetric"],
+            "asymmetric": result6["asymmetric"],
+            "antisymmetric": result6["antisymmetric"],
+            "transitive": result6["transitive"],
+        },
+        "R2": mat(result6["R2"]),
+        "R_inv": mat(result6["R_inv"]),
+        "R_comp": mat(result6["R_comp"]),
+        "R_strict": mat(result6["R_strict"]),
+        "greatest": [i + 1 for i in result6["greatest"]],
+        "least": [i + 1 for i in result6["least"]],
+        "maximal": [i + 1 for i in result6["maximal"]],
+        "minimal": [i + 1 for i in result6["minimal"]],
+    }
+}
+
 print("\n" + "=" * 70)
 print("БЛОК 3. Попарні порівняння в задачах прийняття рішень")
 print("=" * 70)
@@ -121,8 +156,15 @@ for i, code in enumerate(codes):
 
 order = np.argsort(-row_sums)
 print("\nРанжирування (від найбільш значущого до найменш значущого):")
+ranking = []
 for rank, idx in enumerate(order, start=1):
     print(f"  {rank}. {codes[idx]} — {names[idx]} (сума = {row_sums[idx]})")
+    ranking.append({
+        "rank": rank,
+        "code": codes[idx],
+        "name": names[idx],
+        "sum": int(row_sums[idx]),
+    })
 
 
 def rel_symbol(v):
@@ -134,6 +176,7 @@ print(f"{'№':<4}{'Трійка':<12}{'Умова':<20}{'Висновок':<20}
 total_triads = 0
 checkable = 0
 violations = 0
+triads = []
 for idx, (i, j, k) in enumerate(itertools.combinations(range(n), 3), start=1):
     total_triads += 1
     a_ij, a_jk, a_ik = M[i, j], M[j, k], M[i, k]
@@ -141,6 +184,10 @@ for idx, (i, j, k) in enumerate(itertools.combinations(range(n), 3), start=1):
     cond = f"{codes[i]}{rel_symbol(a_ij)}{codes[j]}, {codes[j]}{rel_symbol(a_jk)}{codes[k]}"
     if a_ij == 0 or a_jk == 0 or a_ij != a_jk:
         print(f"{idx:<4}{triple:<12}{cond:<20}{'не перевіряється':<20}")
+        triads.append({
+            "triple": triple, "cond": cond,
+            "checkable": False, "conclusion": "", "mark": "",
+        })
         continue
     checkable += 1
     expected = a_ij
@@ -150,6 +197,27 @@ for idx, (i, j, k) in enumerate(itertools.combinations(range(n), 3), start=1):
     if not ok:
         violations += 1
     print(f"{idx:<4}{triple:<12}{cond:<20}{concl:<20}{mark}")
+    triads.append({
+        "triple": triple, "cond": cond,
+        "checkable": True, "conclusion": concl, "mark": mark,
+    })
 
 print(f"\nВсього трійок: {total_triads}, перевірюваних: {checkable}, порушень транзитивності: {violations}")
 print("Матриця узгоджена" if violations == 0 else f"Матриця має {violations} порушень транзитивності")
+
+data["block3"] = {
+    "names": names,
+    "codes": codes,
+    "M": mat(M),
+    "row_sums": [int(x) for x in row_sums],
+    "ranking": ranking,
+    "triads": triads,
+    "total_triads": total_triads,
+    "checkable": checkable,
+    "violations": violations,
+}
+
+out_path = SCRIPT_DIR / "data.json"
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False, indent=2)
+print(f"\nДані збережено у {out_path}")
