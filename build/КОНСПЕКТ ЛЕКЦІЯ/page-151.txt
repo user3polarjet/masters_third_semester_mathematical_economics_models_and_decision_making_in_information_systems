@@ -1,0 +1,47 @@
+СПИСОК РЕКОМЕНДОВАНОЇ ЛІТЕРАТУРИ
+1. Pavlov, A.A., Khalus, E.A., Borysenko, I.V.: Planning automation in discrete
+systems with a given structure of technological processes. In: Hu, Z., Petoukhov, S.,
+Dychka, I., He, M. (eds.) ICCSEEA 2018. AISC, vol. 754, pp. 177–185. Springer,
+Cham (2019). https://doi.org/10.1007/978-3-319-91008-6_18
+2. Pavlov, A.A.: Long-term operational planning of a small-series production under
+uncertainty (Theory and Practice). In: Hu, Z., Petoukhov, S., Dychka, I., He, M.
+(eds.) ICCSEEA 2020. AISC, vol. 1247, pp. 167–180. Springer, Cham (2021).
+https://doi.org/10.1007/978-3-030-55506-1_15
+3. Zgurovsky, M.Z., Pavlov, A.A.: Algorithms and software of the four-level model of
+planning and decision making. In: Combinatorial Optimization Problems in Planning
+and Decision Making: Theory and Applications, Studies in Systems, Decision and
+Control 1st edn., vol. 173, pp. 407–518. Springer, Cham (2019).
+https://doi.org/10.1007/978-3-319-98977-8_9
+4. Chowdhary, K.R.: Automated planning. In: Fundamentals of Artificial Intelligence.
+Springer, New Delhi (2020). https://doi.org/10.1007/978-81-322-3972-7_15
+5. Ashokkumar, P.R.: Material requirements planning (MRP-I): an overview and
+methodology for successful implementation. Int. J. Adv. Acad. Stud. 2(2), 24–26
+(2020)
+6. Titov, V.V., Bezmelnitsyn, D.A., Napreeva, S.K.: Planirovanie funktsionirovaniya
+predpriyatiya v usloviyakh riska i neopredelennosti vo vneshney i vnutrenney srede.
+Nauchnotekhnicheskie vedomosti SPbGPU. Ekonomicheskie nauki 10(5), 172–183
+(2017). https://doi.org/10.18721/JE.10516. (in Russian)
+7. Jamalnia, A., Yang, J.-B., Feili, A., Xu, D.-L., Jamali, G.: Aggregate production
+planning under uncertainty: a comprehensive literature survey and future research
+directions. Int. J. Adv. Manuf. Technol. 102, 159–181 (2019).
+https://doi.org/10.1007/s00170-018-3151-y
+8. Surung, J.S., Bayupati, I.P.A., Putri, G.A.A.: The implementation of ERP in supply
+chain management on conventional woven fabric business. Int. J. of Inform. Eng.
+Electr. Bus. (IJIEEB) 12(3), 8–18 (2020). https://doi.org/10.5815/ijieeb.2020.03.02
+9. Abusida, A.M., Gültepe, Y.: An association prediction model: GECOL as a case
+study. Int. J. Inform. Technol. Comput. Sci. (IJITCS) 11(10), 34–39 (2019).
+https://doi.org/10.5815/ijitcs.2019.10.05
+10.Munshi, A., Aljojo, N., Zainol, A., et al.: Employee attendance monitoring system
+by applying the concept of enterprise resource planning (ERP). Int. J. Educ. Manage.
+Eng. (IJEME) 9(5), 1–9 (2019). https://doi.org/10.5815/ijeme.2019.05.01
+11.Swayamsiddha, S., Parija, S., Sahu, P.K., Singh, S.S.: Optimal reporting cell
+planning with binary differential evolution algorithm for location management
+problem. Int. J. Intell. Syst. Appl. (IJISA) 9(4), 23–31 (2017).
+https://doi.org/10.5815/ijisa.2017.04.03
+12.Pavlov, A.A.: Optimization for one class of combinatorial problems under
+uncertainty. Adapt. Syst. Autom. Control 1(34), 81–89 (2019).
+https://doi.org/10.20535/1560-8956.1.2019.178233
+
+151
+
+

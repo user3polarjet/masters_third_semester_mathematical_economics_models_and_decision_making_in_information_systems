@@ -1,0 +1,47 @@
+31.Сізова Н.Д. Лабораторний практикум з курсу «Методи прийняття
+управлінських рішень у турбулентному середовищі». Харків: ХНУБА, 2017.
+166 с.
+32.Сізова Н.Д., Шаповалова О.О. Математичні моделі і методи прийняття рішень.
+Лабораторний практикум для здобувачів вищої освіти спеціальностей 122, 126
+другого (магістерського) рівня. Харків: ХНУБА, 2021. 144 с.
+33.Ткачова О.К. Метод Сааті при прийнятті управлінських рішень. Держава і
+регіони. 2015. № 3. С.92–96.
+34.Ус С.А. Системи та методи прийняття рішень: методичні рекомендації до
+виконання лабораторних робіт. Донецьк: Національний гірничий університет,
+2013. 55 с.
+35.Шиян А. А. Теорія ігор: основи та застосування: навч. посіб. Вінниця: ВНТУ,
+2010. 152 с.
+36.Arrow K. J. Social Choice and Individual Values. 2nd ed. Princeton: Princeton
+University Press, 1963. 124 p.
+37.Arrow K. J., Sen A. K., Suzumura K. (eds.). Handbook of Social Choice and Welfare.
+Vol. 1. Amsterdam: Elsevier, 2002. 1142 p.; Vol. 2. Amsterdam: Elsevier, 2011.
+1248 p.
+38.Boyd S., Vandenberghe L. Convex Optimization. Cambridge: Cambridge University
+Press, 2004. 716 p.
+39.Debreu G. Theory of Value: An Axiomatic Analysis of Economic Equilibrium. New
+Haven: Yale University Press, 1959. 114 p.
+40.Ehrgott M. Multicriteria Optimization. 2nd ed. Berlin: Springer, 2005. 323 p.
+41.Figueira J., Greco S., Ehrgott M. (eds.). Multiple Criteria Decision Analysis: State
+of the Art Surveys. New York: Springer, 2005. 1045 p.
+42.Luenberger D. G., Ye Y. Linear and Nonlinear Programming. 3rd ed. New York:
+Springer, 2008. 546 p.
+43.Mas-Colell A., Whinston M. D., Green J. R. Microeconomic Theory. New York:
+Oxford University Press, 1995. 981 p.
+44.Michael Z. Zgurovsky, Alexander A. Pavlov: Combinatorial Optimization Problems
+in Planning and Decision Making, Theory and Applications, Spinger 2019, 518 p.
+45.Moulin H. Axioms of Cooperative Decision Making. Cambridge: Cambridge
+University Press, 1988. 282 p.
+46.Myerson R. B. Game Theory: Analysis of Conflict. Cambridge, MA: Harvard
+University Press, 1991. 568 p.
+47.Nunnally J. C., Bernstein I. H. Psychometric Theory. 3rd ed. New York: McGrawHill, 1994. 752 p.
+48.Nurmi H. Comparing Voting Systems. Dordrecht: Springer, 1987. 216 p.
+49.Peleg B., Sudhölter P. Introduction to the Theory of Cooperative Games. 2nd ed.
+Berlin: Springer, 2010. 554 p.
+50.Pinedo M. Planning and Scheduling in Manufacturing and Services. New York:
+Springer Science+Business Media, 2009. – 536 с.
+51.Sen A. Collective Choice and Social Welfare. Expanded ed. London: Penguin, 2017.
+576 p.
+
+153
+
+

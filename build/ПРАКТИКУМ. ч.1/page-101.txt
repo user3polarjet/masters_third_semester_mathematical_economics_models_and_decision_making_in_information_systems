@@ -1,0 +1,40 @@
+37.Шиян А. А. Теорія ігор: основи та застосування: навч. посіб. Вінниця:
+ВНТУ, 2010. 152 с.
+38.Arrow K. J. Social Choice and Individual Values. 2nd ed. Princeton: Princeton
+University Press, 1963. 124 p.
+39.Arrow K. J., Sen A. K., Suzumura K. (eds.). Handbook of Social Choice and
+Welfare. Vol. 1. Amsterdam: Elsevier, 2002. 1142 p.; Vol. 2. Amsterdam:
+Elsevier, 2011. 1248 p.
+40.Boyd S., Vandenberghe L. Convex Optimization. Cambridge: Cambridge
+University Press, 2004. 716 p.
+41.Debreu G. Theory of Value: An Axiomatic Analysis of Economic Equilibrium.
+New Haven: Yale University Press, 1959. 114 p.
+42.Ehrgott M. Multicriteria Optimization. 2nd ed. Berlin: Springer, 2005. 323 p.
+43.Figueira J., Greco S., Ehrgott M. (eds.). Multiple Criteria Decision Analysis:
+State of the Art Surveys. New York: Springer, 2005. 1045 p.
+44.Luenberger D. G., Ye Y. Linear and Nonlinear Programming. 3rd ed. New
+York: Springer, 2008. 546 p.
+45.Mas-Colell A., Whinston M. D., Green J. R. Microeconomic Theory. New
+York: Oxford University Press, 1995. 981 p.
+46.Michael Z. Zgurovsky, Alexander A. Pavlov: Combinatorial Optimization
+Problems in Planning and Decision Making, Theory and Applications, Spinger
+2019, 518 p.
+47.Moulin H. Axioms of Cooperative Decision Making. Cambridge: Cambridge
+University Press, 1988. 282 p.
+48.Myerson R. B. Game Theory: Analysis of Conflict. Cambridge, MA: Harvard
+University Press, 1991. 568 p.
+49.Nunnally J. C., Bernstein I. H. Psychometric Theory. 3rd ed. New York:
+McGraw-Hill, 1994. 752 p.
+50.Nurmi H. Comparing Voting Systems. Dordrecht: Springer, 1987. 216 p.
+51.Peleg B., Sudhölter P. Introduction to the Theory of Cooperative Games. 2nd
+ed. Berlin: Springer, 2010. 554 p.
+52.Pinedo M. Planning and Scheduling in Manufacturing and Services. New York:
+Springer Science+Business Media, 2009. – 536 с.
+53.Sen A. Collective Choice and Social Welfare. Expanded ed. London: Penguin,
+2017. 576 p.
+54.Taylor A. D. Mathematics and Politics: Strategy, Voting, Power, and Proof.
+2nd ed. New York: Springer, 2005. 287 p.
+
+101
+
+
