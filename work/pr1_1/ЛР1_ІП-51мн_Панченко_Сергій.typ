@@ -63,6 +63,8 @@
 #set heading(numbering: (..nums) => nums.pos().map(str).join("."))
 #show heading: it => {
   if it.level == 1 {
+    counter(figure.where(kind: table)).update(0)
+    counter(figure.where(kind: image)).update(0)
     set align(center)
     set text(weight: "regular", size: 18pt)
     pagebreak()
