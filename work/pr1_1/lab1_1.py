@@ -7,9 +7,29 @@ import matplotlib.pyplot as plt
 from scipy import stats
 import pathlib
 import os
+import json
 
 SCRIPT_PATH = pathlib.Path(os.path.abspath(__file__))
 SCRIPT_DIR = SCRIPT_PATH.parent
+DATA_PATH = SCRIPT_DIR / "data.json"
+
+
+def save_block(key, block):
+    """Зчитує наявний data.json (якщо є), оновлює один блок і зберігає назад,
+    щоб два скрипти лабораторної роботи могли ділити один файл даних."""
+    data = {}
+    if DATA_PATH.exists():
+        with open(DATA_PATH, encoding="utf-8") as f:
+            data = json.load(f)
+    data[key] = block
+    with open(DATA_PATH, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def r6(x):
+    if isinstance(x, np.ndarray):
+        return np.round(x, 6).tolist()
+    return round(float(x), 6)
 
 # ---------------------------------------------------------------
 # 1. Вихідні дані (варіант 6)
@@ -237,5 +257,61 @@ plt.tight_layout()
 plt.savefig(SCRIPT_DIR / 'fig5_isoquant_isocline.svg')
 plt.close()
 
+# ---------------------------------------------------------------
+# Точка перетину ізокванти та ізокліналі (для точності звіту)
+# ---------------------------------------------------------------
+diff = x2_isoquant - np.sqrt(np.clip((a1 / a2) * x1_range ** 2 + a_const, 0, None))
+sign_change = np.where(np.diff(np.sign(diff)))[0]
+if len(sign_change) > 0:
+    idx = sign_change[0]
+    intersection = (float(x1_range[idx]), float(x2_isoquant[idx]))
+else:
+    intersection = None
+print(f"Точка перетину ізокванти та ізокліналі: {intersection}")
+
 print("=" * 70)
 print(f"Графіки збережено у {SCRIPT_DIR}/*.png")
+
+# ---------------------------------------------------------------
+# Збереження результатів у data.json (спільний з lab1_2.py файл)
+# ---------------------------------------------------------------
+save_block("block1_1", {
+    "n": n,
+    "X1": X1.tolist(),
+    "X2": X2.tolist(),
+    "Y": Y.tolist(),
+    # Форматовані з фіксованою кількістю знаків рядки для таблиці (щоб
+    # уникнути втрати кінцевого нуля, напр. 55.0 -> "55.0", при друці в Typst)
+    "X1_disp": [f"{v:.1f}" for v in X1],
+    "X2_disp": [f"{v:.1f}" for v in X2],
+    "Y_disp": [f"{v:.1f}" for v in Y],
+    "params": {
+        "ln_a0": r6(ln_a0), "se_ln_a0": r6(se_ln_a0),
+        "a1": r6(a1), "se_a1": r6(se_a1),
+        "a2": r6(a2), "se_a2": r6(se_a2),
+        "a0": r6(a0),
+    },
+    "r2": r6(r2),
+    "F_stat": round(float(F_stat), 4),
+    "F_crit": round(float(F_crit), 4),
+    "k1": k1, "k2": k2,
+    "t_crit": round(float(t_crit), 4),
+    "t_ln_a0": round(float(t_ln_a0), 4),
+    "t_a1": round(float(t_a1), 4),
+    "t_a2": round(float(t_a2), 4),
+    "elasticity": {"E_X1": r6(a1), "E_X2": r6(a2)},
+    "homogeneous": {
+        "scale_sum": r6(scale_sum),
+        "alpha_h": r6(alpha_h),
+        "beta_h": r6(beta_h),
+    },
+    "efficiency_scale": {
+        "periods": periods.tolist(),
+        "E": r6(E),
+        "M": r6(M),
+    },
+    "isoquant": {"Y_target": Y_target},
+    "isocline": {"K0": K0, "L0": L0, "a_const": r6(a_const)},
+    "intersection": [round(intersection[0], 1), round(intersection[1], 1)] if intersection else None,
+})
+print(f"Дані блоку 1.1 збережено у {DATA_PATH}")

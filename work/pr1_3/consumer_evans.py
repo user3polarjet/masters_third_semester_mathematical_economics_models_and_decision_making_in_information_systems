@@ -2,12 +2,30 @@
 Лабораторна робота №3 — Варіант 6
 Моделювання поведінки споживача та функції попиту: класичний підхід і модель Еванса
 """
+import json
 import pathlib
 
 import matplotlib.pyplot as plt
 import numpy as np
 
 SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
+DATA_PATH = SCRIPT_DIR / "data.json"
+
+
+def save_block(key, block):
+    data = {}
+    if DATA_PATH.exists():
+        with open(DATA_PATH, encoding="utf-8") as f:
+            data = json.load(f)
+    data[key] = block
+    with open(DATA_PATH, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def r6(x):
+    if isinstance(x, np.ndarray):
+        return np.round(x, 6).tolist()
+    return round(float(x), 6)
 
 print("=" * 70)
 print("БЛОК 3.1. Модель поведінки споживача")
@@ -196,5 +214,37 @@ plt.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.savefig(SCRIPT_DIR / "fig5_evans_discrete_demand_supply.svg")
 plt.close()
+
+save_block("block3_1", {
+    "task1": {
+        "X1_0": X1_0, "X2_0": X2_0, "U_level": r6(U_level),
+        "B": B, "p1": p1, "p2": p2,
+        "X1_eq": r6(X1_eq), "X2_eq": r6(X2_eq), "U_eq": r6(U_eq),
+    },
+    "task2": {
+        "Bb": Bb, "q1": q1, "q2": q2, "q3": q3,
+        "x1": r6(x1), "x2": r6(x2), "x3": r6(x3),
+        "budget_check": r6(q1 * x1 + q2 * x2 + q3 * x3),
+        "U2": round(float(U2), 2),
+    },
+})
+
+save_block("block3_2", {
+    "n": n, "gamma": r6(gamma),
+    "a": a, "b": b, "alpha": alpha, "beta": beta,
+    "p0": p0, "p_star": r6(p_star),
+    "p1_val": round(float(p1_val), 4),
+    "pn_val": round(float(pn_val), 4),
+    "discrete": {
+        "p0_disc": p0_disc,
+        "ratio": r6(ratio),
+        "i": i_range.tolist(),
+        "p_i": r6(p_i_vals),
+        "p_i_disp": [f"{v:.4f}" for v in p_i_vals],
+        "p_n_disp": f"{p_i_vals[-1]:.4f}",
+        "D_S_limit": round(float(a - b * p_star), 1),
+    },
+})
+print(f"Дані збережено у {DATA_PATH}")
 
 print("\nГрафіки збережено у", SCRIPT_DIR)

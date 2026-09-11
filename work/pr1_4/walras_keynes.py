@@ -6,6 +6,7 @@
 від номера варіанта (завдання є спільним прикладом для реалізації в Python
 замість Excel).
 """
+import json
 import pathlib
 
 import matplotlib.pyplot as plt
@@ -13,6 +14,17 @@ import numpy as np
 from scipy.optimize import fsolve
 
 SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
+DATA_PATH = SCRIPT_DIR / "data.json"
+
+
+def save_block(key, block):
+    data = {}
+    if DATA_PATH.exists():
+        with open(DATA_PATH, encoding="utf-8") as f:
+            data = json.load(f)
+    data[key] = block
+    with open(DATA_PATH, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
 print("=" * 70)
 print("БЛОК 4.1. Модель Вальраса конкурентної рівноваги")
@@ -254,5 +266,37 @@ plt.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.savefig(SCRIPT_DIR / "fig5_production_function.svg")
 plt.close()
+
+save_block("block4_1", {
+    "P_A": round(float(P_A), 4), "P_B": round(float(P_B), 4),
+    "table1": {
+        "A": {"Q_S": f"{Q_A_S:.1f}", "L_D": f"{L_A_D:.1f}", "pi": f"{pi_A:.1f}",
+              "Q1": f"{Q_A1:.1f}", "Q2": f"{Q_A2:.1f}"},
+        "B": {"Q_S": f"{Q_B_S:.1f}", "L_D": f"{L_B_D:.1f}", "pi": f"{pi_B:.1f}",
+              "Q1": f"{Q_B1:.1f}", "Q2": f"{Q_B2:.1f}"},
+    },
+    "table2": {
+        "h1": {"wage": f"{income1_wage:.1f}", "profit": f"{income1_profit:.1f}",
+               "income": f"{income1_total:.1f}", "exp_A": f"{exp1_A:.1f}",
+               "exp_B": f"{exp1_B:.1f}", "exp_total": f"{exp1_total:.1f}"},
+        "h2": {"wage": f"{income2_wage:.1f}", "profit": f"{income2_profit:.1f}",
+               "income": f"{income2_total:.1f}", "exp_A": f"{exp2_A:.1f}",
+               "exp_B": f"{exp2_B:.1f}", "exp_total": f"{exp2_total:.1f}"},
+    },
+    "check": {
+        "Q_A_total": round(float(Q_A1 + Q_A2), 2), "Q_A_S": round(float(Q_A_S), 2),
+        "Q_B_total": round(float(Q_B1 + Q_B2), 2), "Q_B_S": round(float(Q_B_S), 2),
+        "L_S_total": round(float(L_A_S + L_B_S), 2), "L_D_total": round(float(L_A_D + L_B_D), 2),
+    },
+})
+
+save_block("block4_2", {
+    "params": {"a": a, "d": d, "f": f, "b": b, "Ms": Ms, "k": k, "h": h, "j": j, "p": p,
+               "A_prod": A_prod, "beta": beta},
+    "r_approx": 0.38, "Y_approx": 180000,
+    "r0": round(float(r0), 9), "Y0": round(float(Y0), 4),
+    "L0": round(float(L0), 4), "Y_prod_L0": round(float(Y_prod(L0)), 4),
+})
+print(f"Дані збережено у {DATA_PATH}")
 
 print("\nГрафіки збережено у", SCRIPT_DIR)

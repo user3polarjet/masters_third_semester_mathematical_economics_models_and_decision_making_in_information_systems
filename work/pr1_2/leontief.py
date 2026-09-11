@@ -2,6 +2,7 @@
 Лабораторна робота №2 — Варіант 6
 Аналіз економічних процесів за допомогою міжгалузевих балансових моделей Леонтьєва
 """
+import json
 import pathlib
 
 import matplotlib.pyplot as plt
@@ -10,6 +11,31 @@ import numpy as np
 np.set_printoptions(precision=6, suppress=True)
 
 SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
+DATA_PATH = SCRIPT_DIR / "data.json"
+
+
+def save_block(key, block):
+    data = {}
+    if DATA_PATH.exists():
+        with open(DATA_PATH, encoding="utf-8") as f:
+            data = json.load(f)
+    data[key] = block
+    with open(DATA_PATH, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def r6(x):
+    if isinstance(x, np.ndarray):
+        return np.round(x, 6).tolist()
+    return round(float(x), 6)
+
+
+def mat_disp(M, fmt="{:.6f}"):
+    return [[fmt.format(v) for v in row] for row in np.atleast_2d(M)]
+
+
+def vec_disp(v, fmt="{:.3f}"):
+    return [fmt.format(x) for x in v]
 
 
 def check_productivity(A, label):
@@ -215,3 +241,102 @@ print(f"t (коефіцієнти прямої трудомісткості) = L
 print(f"T (коефіцієнти повної трудомісткості) = t * B = {T_lf}")
 print(f"F (коефіцієнти повної фондомісткості) = f * B = {F_lf}")
 print(f"Перевірка балансового рівняння (2.18): t*X = {t_lf @ X_lf:.4f}, T*Y = {T_lf @ Y_lf:.4f}")
+
+# ---------------------------------------------------------------
+# Збереження результатів у data.json
+# ---------------------------------------------------------------
+Q1_1, net1 = balance_table(A1, X1, "2.1.1 (json)")
+Q1_4, net4 = balance_table(A2, X2, "2.1.4 (json)")
+Q1_5, net5 = balance_table(A_ex, X5, "2.1.5 (json)")
+
+roots_sorted = np.sort(roots)
+
+save_block("task2_1_1", {
+    "A": r6(A1), "Y": r6(Y1),
+    "B": r6(B1), "B_disp": mat_disp(B1),
+    "productive_inv": bool(prod1),
+    "roots": r6(roots_sorted),
+    "roots_disp": vec_disp(roots_sorted, "{:.4f}"),
+    "max_root": r6(roots.max()),
+    "productive_char": bool(roots.max() < 1),
+    "X": r6(X1), "X_disp": vec_disp(X1),
+    "balance": {
+        "Q1": r6(Q1_1), "Q1_disp": mat_disp(Q1_1, "{:.3f}"),
+        "net": r6(net1), "net_disp": vec_disp(net1),
+        "net_sum": round(float(net1.sum()), 3),
+        "Y_sum": round(float(X1.sum() - Q1_1.sum()), 3),
+        "X_sum": round(float(X1.sum()), 3),
+    },
+})
+
+save_block("task2_1_2", {
+    "A": r6(A2), "Y": r6(Y2),
+    "B": r6(B2), "B_disp": mat_disp(B2),
+    "col_norms": vec_disp(np.max(np.abs(A2), axis=0), "{:.2f}"),
+    "max_eig": r6(np.max(np.abs(np.linalg.eigvals(A2)))),
+    "X": r6(X2), "X_disp": vec_disp(X2),
+})
+
+save_block("task2_1_4", {
+    "balance": {
+        "Q1": r6(Q1_4), "Q1_disp": mat_disp(Q1_4, "{:.3f}"),
+        "net": r6(net4), "net_disp": vec_disp(net4),
+        "net_sum": round(float(net4.sum()), 3),
+        "net_sum_disp": f"{net4.sum():.2f}",
+        "Y_sum": round(float(X2.sum() - Q1_4.sum()), 3),
+        "Y_sum_disp": f"{X2.sum() - Q1_4.sum():.2f}",
+        "X": r6(X2), "X_disp": vec_disp(X2),
+        "X_sum": round(float(X2.sum()), 3),
+        "Y_disp": vec_disp(Y2),
+    },
+})
+
+save_block("task2_1_5", {
+    "A_ex": r6(A_ex), "B_ex": r6(B_ex), "B_ex_disp": mat_disp(B_ex),
+    "Y5": r6(Y5), "X5": r6(X5), "X5_disp": vec_disp(X5),
+    "X0": r6(B_ex @ np.array([200.0, 100.0, 300.0])),
+    "balance": {
+        "Q1": r6(Q1_5), "Q1_disp": mat_disp(Q1_5, "{:.3f}"),
+        "net": r6(net5), "net_disp": vec_disp(net5),
+        "net_sum": round(float(net5.sum()), 3),
+        "Y_sum": round(float(X5.sum() - Q1_5.sum()), 3),
+        "X_sum": round(float(X5.sum()), 2),
+    },
+})
+
+save_block("task2_1_6", {
+    "A": r6(A6), "Y": r6(Y6),
+    "max_eig": r6(np.max(np.abs(np.linalg.eigvals(A6)))),
+    "productive": bool(prod6),
+    "X": r6(X6), "X_disp": vec_disp(X6),
+})
+
+save_block("task2_1_7", {
+    "A": r6(A7), "A_disp": mat_disp(A7, "{:.4f}"),
+    "v": r6(v7), "v_disp": vec_disp(v7, "{:.4f}"),
+    "resid_p0": r6(p0 - (A7.T @ p0 + v7)),
+    "a12": f"{A7[0, 1]:.4f}", "a13": f"{A7[0, 2]:.4f}",
+    "p1_new": p1_new,
+    "p2_new": round(float(p2_new), 4),
+    "p3_new": round(float(p3_new), 4),
+    "p2_change_pct": round(float((p2_new - 1) * 100), 1),
+    "p3_change_pct": round(float((p3_new - 1) * 100), 1),
+})
+
+save_block("task2_2_1", {
+    "i": i,
+    "A": r6(A_lf), "Y": r6(Y_lf), "L": r6(L_lf), "f": r6(f_lf),
+    "max_eig": r6(np.max(np.abs(np.linalg.eigvals(A_lf)))),
+    "productive": bool(prod_lf),
+    "X": r6(X_lf), "X_disp": vec_disp(X_lf, "{:.2f}"),
+    "t": r6(t_lf), "t_disp": vec_disp(t_lf, "{:.4f}"),
+    "T": r6(T_lf), "T_disp": vec_disp(T_lf, "{:.4f}"),
+    "F": r6(F_lf), "F_disp": vec_disp(F_lf, "{:.2f}"),
+    "tX": round(float(t_lf @ X_lf), 4),
+    "TY": round(float(T_lf @ Y_lf), 4),
+    "tX_disp": f"{t_lf @ X_lf:.1f}",
+    "TY_disp": f"{T_lf @ Y_lf:.1f}",
+    "F_max_idx": int(np.argmax(F_lf)),
+    "F_min_idx": int(np.argmin(F_lf)),
+})
+print(f"Дані збережено у {DATA_PATH}")

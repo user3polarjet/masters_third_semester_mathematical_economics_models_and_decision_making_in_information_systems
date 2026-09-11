@@ -208,7 +208,7 @@ $ F(x) = alpha_1 f_1^*(x) + alpha_2 f_2^*(x) arrow.r min. $
 
 Головним критерієм обрано $f_1$ (обсяг робіт) як такий, для якого експертна оцінка допустимого рівня є найскладнішою. Встановлено додаткове обмеження на максимально допустиму вартість робіт $f_2(x) <= $ #d.main_criterion.f2_threshold грн:
 
-$ f_1(x) arrow.r max; quad f_2(x) <= #d.main_criterion.f2_threshold; quad sum_j x_(i j) <= T_i; quad x_(i j) >= 0. $
+$ f_1(x) arrow.r max; quad f_2(x) <= #d.main_criterion.f2_threshold\; quad sum_j x_(i j) <= T_i; quad x_(i j) >= 0. $
 
 #x-table(d.main_criterion.x, [Розв'язок методом головного критерію ($f_2 <=$ #d.main_criterion.f2_threshold)])
 
@@ -220,7 +220,7 @@ $ f_1(x) arrow.r max; quad f_2(x) <= #d.main_criterion.f2_threshold; quad sum_j 
 
 Прийнято припустиму поступку за першим критерієм $Delta = $ #d.sequential.delta м³ (#calc.round(d.sequential.delta_frac * 100, digits: 1)% від $f_1^"max"$), тобто нова нижня межа: $f_1(x) >= f_1^"max" - Delta = $ #d.sequential.f1_floor. На другому кроці розв'язано задачу мінімізації другого критерію за цього додаткового обмеження:
 
-$ f_2(x) arrow.r min; quad f_1(x) >= #d.sequential.f1_floor; quad sum_j x_(i j) <= T_i; quad x_(i j) >= 0. $
+$ f_2(x) arrow.r min; quad f_1(x) >= #d.sequential.f1_floor\; quad sum_j x_(i j) <= T_i; quad x_(i j) >= 0. $
 
 #x-table(d.sequential.x, [Розв'язок методом послідовної поступки ($f_1 >=$ #d.sequential.f1_floor)])
 
