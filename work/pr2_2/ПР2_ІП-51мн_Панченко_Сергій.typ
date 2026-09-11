@@ -118,7 +118,7 @@
     stroke: 0.5pt,
     inset: 5pt,
     align: center,
-    table.header([], ..names.map(n => [*#n*])),
+    table.header([], ..names.map(n => [#n])),
     ..for (i, name) in names.enumerate() {
       ([#name],) + matrix-frac.at(i).map(v => [#v])
     }
@@ -144,7 +144,7 @@
     stroke: 0.5pt,
     inset: 5pt,
     align: (center, left),
-    table.header([*Код*], [*Напрямок*]),
+    table.header([Код], [Напрямок]),
     ..d.block1.topics.enumerate().map(((i, t)) => ([$f_#(i+1)$], [#t])).flatten()
   ),
   caption: [Напрямки вдосконалення радіоаматорської сфери (варіант 6)]
@@ -162,7 +162,7 @@
     stroke: 0.5pt,
     inset: 5pt,
     align: center,
-    table.header([*Експерт*], [*$K_"з"$*], [*Теорія*], [*Досвід*], [*Літ-ра*], [*Інтуїція*], [*$K_k$*]),
+    table.header([Експерт], [$K_"з"$], [Теорія], [Досвід], [Літ-ра], [Інтуїція], [$K_k$]),
     ..d.block1.experts.map(e => (
       [#e.expert], [#e.Kz], [#e.theory], [#e.experience], [#e.literature], [#e.intuition], [#e.Kk],
     )).flatten()
@@ -180,7 +180,7 @@
     stroke: 0.5pt,
     inset: 5pt,
     align: center,
-    table.header([*Експерт*], ..range(1, d.block1.topics.len() + 1).map(j => [*$f_#j$*])),
+    table.header([Експерт], ..range(1, d.block1.topics.len() + 1).map(j => [$f_#j$])),
     ..for (i, row) in d.block1.scores.enumerate() {
       ([#(i+1)],) + row.map(v => [#v])
     }
@@ -198,7 +198,7 @@ $ M_j = (sum_(i=1)^(m) K_k^((i)) c_(i j))/m, quad j=1,...,n. $
     stroke: 0.5pt,
     inset: 5pt,
     align: center,
-    table.header([], ..range(1, d.block1.topics.len() + 1).map(j => [*$f_#j$*])),
+    table.header([], ..range(1, d.block1.topics.len() + 1).map(j => [$f_#j$])),
     [$M_j$], ..d.block1.Mj.map(v => [#v]),
     [$R_i$], ..d.block1.Ri.map(v => [#v]),
     [$lambda_i$], ..d.block1.lambda.map(v => [#v]),
@@ -208,14 +208,14 @@ $ M_j = (sum_(i=1)^(m) K_k^((i)) c_(i j))/m, quad j=1,...,n. $
 
 Відносні коефіцієнти значущості обчислено за формулою $lambda_i = 2[(n+1-R_i)\/(n(n+1))]$, їхня сума точно дорівнює #d.block1.lambda_sum.
 
-*Остаточне ранжирування:*
+Остаточне ранжирування:
 
 #context {
   let parts = d.block1.ranking.map(r => [$#r.code$])
   parts.join([ $>$ ])
 }
 
-Отже, найпріоритетнішим напрямком удосконалення радіоаматорської сфери, на думку зваженої групи експертів, є *#d.block1.ranking.at(0).topic* (#d.block1.ranking.at(0).code), а найменш пріоритетним — *#d.block1.ranking.at(-1).topic* (#d.block1.ranking.at(-1).code), що можна пояснити високою вартістю й віддаленістю таких ініціатив порівняно з практичними технологічними вдосконаленнями.
+Отже, найпріоритетнішим напрямком удосконалення радіоаматорської сфери, на думку зваженої групи експертів, є #d.block1.ranking.at(0).topic (#d.block1.ranking.at(0).code), а найменш пріоритетним — #d.block1.ranking.at(-1).topic (#d.block1.ranking.at(-1).code), що можна пояснити високою вартістю й віддаленістю таких ініціатив порівняно з практичними технологічними вдосконаленнями.
 
 = Блок 2. Шкала Сааті — вибір автомобіля
 
@@ -239,7 +239,7 @@ $ M_j = (sum_(i=1)^(m) K_k^((i)) c_(i j))/m, quad j=1,...,n. $
     stroke: 0.5pt,
     inset: 5pt,
     align: center,
-    table.header([*Альтернатива*], [*Рядкові суми (норм.)*], [*Власний вектор*]),
+    table.header([Альтернатива], [Рядкові суми (норм.)], [Власний вектор]),
     ..d.block2.alt_names.enumerate().map(((i, name)) => (
       [#name], [#d.block2.design.w_rowsum.at(i)], [#d.block2.design.w_eig.at(i)],
     )).flatten()
@@ -267,7 +267,7 @@ $ M_j = (sum_(i=1)^(m) K_k^((i)) c_(i j))/m, quad j=1,...,n. $
     stroke: 0.5pt,
     inset: 5pt,
     align: center,
-    table.header([*Альтернатива*], [*Надійність*], [*Економічність*]),
+    table.header([Альтернатива], [Надійність], [Економічність]),
     ..d.block2.alt_names.enumerate().map(((i, name)) => (
       [#name], [#d.block2.reliability.w_eig.at(i)], [#d.block2.economy.w_eig.at(i)],
     )).flatten(),
@@ -296,7 +296,7 @@ $ M_j = (sum_(i=1)^(m) K_k^((i)) c_(i j))/m, quad j=1,...,n. $
     stroke: 0.5pt,
     inset: 5pt,
     align: center,
-    table.header([*Альтернатива*], [*Інтегральна оцінка $U$*]),
+    table.header([Альтернатива], [Інтегральна оцінка $U$]),
     ..d.block2.alt_names.enumerate().map(((i, name)) => ([#name], [#d.block2.utility.at(i)])).flatten()
   ),
   caption: [Інтегральна оцінка альтернатив (функція корисності)]
@@ -314,7 +314,7 @@ $ M_j = (sum_(i=1)^(m) K_k^((i)) c_(i j))/m, quad j=1,...,n. $
     stroke: 0.5pt,
     inset: 5pt,
     align: center,
-    table.header([*Альтернатива*], [*Вартість*], [*Норм. вартість*], [*Корисність*], [*Відношення*]),
+    table.header([Альтернатива], [Вартість], [Норм. вартість], [Корисність], [Відношення]),
     ..d.block2.alt_names.enumerate().map(((i, name)) => (
       [#name],
       [#d.block2.cost.values.at(i)],
@@ -336,7 +336,7 @@ $ M_j = (sum_(i=1)^(m) K_k^((i)) c_(i j))/m, quad j=1,...,n. $
     stroke: 0.5pt,
     inset: 5pt,
     align: center,
-    table.header([*Альтернатива*], [*Швидкість, км/год*], [*Нормоване значення*]),
+    table.header([Альтернатива], [Швидкість, км/год], [Нормоване значення]),
     ..d.block2.alt_names.enumerate().map(((i, name)) => (
       [#name], [#d.block2.speed.values.at(i)], [#d.block2.speed.normalized.at(i)],
     )).flatten()

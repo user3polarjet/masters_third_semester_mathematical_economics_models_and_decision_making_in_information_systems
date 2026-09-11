@@ -198,7 +198,7 @@ $ R^S = mat(..#(d.block2.R_strict)). $
     stroke: 0.5pt,
     inset: 5pt,
     align: (center, left),
-    table.header([*Позначення*], [*Дисципліна*]),
+    table.header([Позначення], [Дисципліна]),
     ..d.block3.codes.zip(d.block3.names).map(((c, name)) => ([$#c$], [#name])).flatten()
   ),
   caption: [Перелік дисциплін для попарного порівняння]
@@ -214,7 +214,7 @@ $ R^S = mat(..#(d.block2.R_strict)). $
     stroke: 0.5pt,
     inset: 5pt,
     align: center,
-    table.header([*Дисц.*], ..d.block3.codes.map(c => [*$#c$*]), [*$sum$*]),
+    table.header([Дисц.], ..d.block3.codes.map(c => [$#c$]), [$sum$]),
     ..for (i, code) in d.block3.codes.enumerate() {
       ([$#code$],) + d.block3.M.at(i).map(v => [#v]) + ([#d.block3.row_sums.at(i)],)
     }
@@ -243,7 +243,7 @@ $ R^S = mat(..#(d.block2.R_strict)). $
     stroke: 0.5pt,
     inset: 5pt,
     align: center,
-    table.header([*Трійка*], [*Умова*], [*Очікується / факт*], [*Оцінка*]),
+    table.header([Трійка], [Умова], [Очікується / факт], [Оцінка]),
     ..d.block3.triads.filter(t => t.checkable).map(t => ([#t.triple], [#t.cond], [#t.conclusion], [#t.mark])).flatten()
   ),
   caption: [Перевірка транзитивності на всіх перевірюваних трійках]
