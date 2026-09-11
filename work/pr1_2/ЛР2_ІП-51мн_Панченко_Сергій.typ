@@ -5,7 +5,7 @@
 )
 
 #align(center)[
-  #image("kpi.png", width: 75%)
+  #image("kpi.svg", width: 75%)
 
   Міністерство освіти і науки України
 

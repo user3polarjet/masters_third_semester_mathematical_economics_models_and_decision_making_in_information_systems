@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-dc-tpl="10" viewBox="46 12 1068 142" width="1068" xmlns="http://www.w3.org/2000/svg" data-om-id="43e13a6d:15" height="142">
+      <defs>
+        <g id="arcBay">
+          <rect x="0" y="96" width="24" height="9" fill="#111"/>
+          <rect x="3.5" y="99" width="5" height="4" fill="#fff"/>
+          <rect x="12.5" y="99" width="5" height="4" fill="#fff"/>
+          <rect x="0" y="105" width="24" height="3" fill="#111"/>
+          <rect x="0" y="108" width="24" height="13" fill="#111"/>
+          <path d="M5.5 121 V114 A6.5 6.5 0 0 1 18.5 114 V121 Z" fill="#fff"/>
+          <rect x="0" y="121" width="24" height="4" fill="#111"/>
+          <rect x="0" y="125" width="24" height="13" fill="#111"/>
+          <path d="M7 138 V131 A5 5 0 0 1 17 131 V138 Z" fill="#fff"/>
+          <rect x="11.5" y="131" width="1.5" height="7" fill="#111"/>
+        </g>
+
+        <g id="leftHalf">
+          <g>
+            <use href="#arcBay" x="120"/>
+            <use href="#arcBay" x="144"/>
+            <use href="#arcBay" x="168"/>
+            <use href="#arcBay" x="192"/>
+            <use href="#arcBay" x="216"/>
+            <use href="#arcBay" x="240"/>
+            <use href="#arcBay" x="264"/>
+            <rect x="288" y="96" width="14" height="9" fill="#111"/>
+            <rect x="292" y="99" width="6" height="4" fill="#fff"/>
+            <rect x="288" y="105" width="14" height="3" fill="#111"/>
+            <rect x="288" y="108" width="14" height="13" fill="#111"/>
+            <rect x="288" y="121" width="14" height="4" fill="#111"/>
+            <rect x="288" y="125" width="14" height="13" fill="#111"/>
+          </g>
+
+          <g>
+            <rect x="342" y="78" width="188" height="9" fill="#111"/>
+            <rect x="448" y="70" width="38" height="8" fill="#111"/>
+            <rect x="454" y="73" width="6" height="4" fill="#fff"/>
+            <rect x="466" y="73" width="6" height="4" fill="#fff"/>
+            <rect x="342" y="87" width="188" height="51" fill="#111"/>
+            <rect x="342" y="104.5" width="188" height="2" fill="#fff"/>
+            <rect x="342" y="124" width="188" height="2" fill="#fff"/>
+            <g fill="#fff">
+              <path d="M348 104 V95 A5 5 0 0 1 358 95 V104 Z"/>
+              <path d="M364 104 V95 A5 5 0 0 1 374 95 V104 Z"/>
+              <path d="M380 104 V95 A5 5 0 0 1 390 95 V104 Z"/>
+              <path d="M396 104 V95 A5 5 0 0 1 406 95 V104 Z"/>
+              <path d="M412 104 V95 A5 5 0 0 1 422 95 V104 Z"/>
+              <path d="M428 104 V95 A5 5 0 0 1 438 95 V104 Z"/>
+              <path d="M444 104 V95 A5 5 0 0 1 454 95 V104 Z"/>
+              <path d="M460 104 V95 A5 5 0 0 1 470 95 V104 Z"/>
+              <path d="M476 104 V95 A5 5 0 0 1 486 95 V104 Z"/>
+              <path d="M492 104 V95 A5 5 0 0 1 502 95 V104 Z"/>
+              <path d="M508 104 V95 A5 5 0 0 1 518 95 V104 Z"/>
+              <rect x="348" y="109" width="10" height="14"/>
+              <rect x="364" y="109" width="10" height="14"/>
+              <rect x="380" y="109" width="10" height="14"/>
+              <rect x="396" y="109" width="10" height="14"/>
+              <rect x="412" y="109" width="10" height="14"/>
+              <rect x="428" y="109" width="10" height="14"/>
+              <rect x="444" y="109" width="10" height="14"/>
+              <rect x="460" y="109" width="10" height="14"/>
+              <rect x="476" y="109" width="10" height="14"/>
+              <rect x="492" y="109" width="10" height="14"/>
+              <rect x="508" y="109" width="10" height="14"/>
+              <rect x="348" y="128" width="10" height="10"/>
+              <rect x="364" y="128" width="10" height="10"/>
+              <rect x="380" y="128" width="10" height="10"/>
+              <rect x="396" y="128" width="10" height="10"/>
+              <rect x="412" y="128" width="10" height="10"/>
+              <rect x="428" y="128" width="10" height="10"/>
+              <rect x="444" y="128" width="10" height="10"/>
+              <rect x="460" y="128" width="10" height="10"/>
+              <rect x="476" y="128" width="10" height="10"/>
+              <rect x="492" y="128" width="10" height="10"/>
+              <rect x="508" y="128" width="10" height="10"/>
+            </g>
+          </g>
+
+          <g>
+            <rect x="304" y="63" width="38" height="15" fill="#111"/>
+            <rect x="310" y="67" width="8" height="5" fill="#fff"/>
+            <rect x="328" y="67" width="8" height="5" fill="#fff"/>
+            <rect x="300" y="78" width="46" height="9" fill="#111"/>
+            <rect x="302" y="87" width="42" height="51" fill="#111"/>
+            <g fill="#fff">
+              <path d="M308 104 V95 A5 5 0 0 1 318 95 V104 Z"/>
+              <path d="M326 104 V95 A5 5 0 0 1 336 95 V104 Z"/>
+              <rect x="308" y="109" width="10" height="14"/>
+              <rect x="326" y="109" width="10" height="14"/>
+              <rect x="308" y="128" width="10" height="10"/>
+              <rect x="326" y="128" width="10" height="10"/>
+              <rect x="302" y="104.5" width="42" height="2"/>
+              <rect x="302" y="124" width="42" height="2"/>
+            </g>
+          </g>
+
+          <g>
+            <rect x="528" y="63" width="24" height="17" fill="#111"/>
+            <rect x="534" y="67" width="10" height="5" fill="#fff"/>
+            <rect x="549" y="51" width="21" height="8" fill="#111"/>
+            <rect x="552" y="45" width="7" height="6" fill="#111"/>
+            <rect x="551" y="59" width="19" height="21" fill="#111"/>
+            <rect x="556" y="63" width="5" height="9" fill="#fff"/>
+            <rect x="564" y="63" width="6" height="9" fill="#fff"/>
+            <rect x="524" y="80" width="46" height="8" fill="#111"/>
+            <rect x="528" y="88" width="42" height="50" fill="#111"/>
+            <g fill="#fff">
+              <rect x="528" y="104.5" width="42" height="2"/>
+              <rect x="528" y="124" width="16" height="2"/>
+              <path d="M532 104 V95 A5 5 0 0 1 542 95 V104 Z"/>
+              <rect x="532" y="109" width="10" height="14"/>
+              <rect x="532" y="128" width="10" height="10"/>
+              <path d="M553 104 V94 A6 6 0 0 1 563 94 V104 Z"/>
+              <rect x="566.5" y="92" width="3.5" height="12"/>
+              <path d="M553 122 V113 A6 6 0 0 1 563 113 V122 Z"/>
+              <rect x="566.5" y="111" width="3.5" height="11"/>
+            </g>
+            <rect x="550" y="126" width="20" height="12" fill="#fff"/>
+            <path d="M555 138 V132 A13 13 0 0 1 570 125.5 V138 Z" fill="#111"/>
+            <rect x="548" y="123" width="22" height="3" fill="#111"/>
+          </g>
+
+          <g>
+            <rect x="56" y="84" width="64" height="9" fill="#111"/>
+            <rect x="62" y="93" width="56" height="4" fill="#111"/>
+            <rect x="62" y="97" width="56" height="41" fill="#111"/>
+            <rect x="117.5" y="93" width="2.5" height="45" fill="#fff"/>
+            <g fill="#fff">
+              <path d="M74 138 V108 A4.5 4.5 0 0 1 83 108 V138 Z"/>
+              <path d="M95 138 V108 A4.5 4.5 0 0 1 104 108 V138 Z"/>
+            </g>
+            <rect x="62" y="115" width="56" height="3.5" fill="#111"/>
+            <rect x="64" y="66" width="48" height="6" fill="#111"/>
+            <rect x="64" y="80" width="48" height="5" fill="#111"/>
+            <g fill="#111">
+              <rect x="66" y="72" width="7" height="8"/>
+              <rect x="79" y="72" width="5" height="8"/>
+              <rect x="93" y="72" width="5" height="8"/>
+              <rect x="104" y="72" width="7" height="8"/>
+            </g>
+            <path d="M64 66 L78 52 L98 52 L112 66 Z" fill="#111"/>
+            <path d="M80 52 Q82 42 88 36 Q94 42 96 52 Z" fill="#111"/>
+            <rect x="86.5" y="18" width="3" height="20" fill="#111"/>
+            <circle cx="88" cy="17" r="2" fill="#111"/>
+            <path d="M86.5 20 L72 22.2 L76.5 24.6 L72 27 L86.5 26.4 Z" fill="#111"/>
+            <circle cx="88" cy="40" r="3" fill="#111"/>
+          </g>
+
+          <g>
+            <path d="M332 138 Q329 128 340 125 Q343 118 353 121 Q359 113 370 119 Q378 112 386 120 Q397 118 400 126 Q410 128 408 138 Z" fill="#fff" stroke="#111" stroke-width="2.2" stroke-linejoin="round"/>
+            <g stroke="#111" stroke-width="1.6" fill="none" stroke-linecap="round">
+              <path d="M346 132 Q352 126 358 131"/>
+              <path d="M368 130 Q374 124 381 129"/>
+              <path d="M390 132 Q395 127 401 131"/>
+            </g>
+          </g>
+          
+          <g>
+            <path d="M416 40 L408 60 L413 61 L403 77 L409 78 L399 95 L406 96 L395 112 L403 113 L391 129 L400 130 L402 138 L430 138 L432 130 L441 129 L429 113 L437 112 L426 96 L433 95 L423 78 L429 77 L419 61 L424 60 Z" fill="#fff" stroke="#111" stroke-width="2.4" stroke-linejoin="round"/>
+            <g stroke="#111" stroke-width="1.5" fill="none" stroke-linecap="round">
+              <path d="M409 70 L416 63 L423 70"/>
+              <path d="M405 88 L416 79 L427 88"/>
+              <path d="M401 106 L416 96 L431 106"/>
+              <path d="M397 124 L416 113 L435 124"/>
+              <path d="M416 138 L416 122"/>
+            </g>
+          </g>
+          
+
+          <g>
+            <path d="M528 147 L550 140.5 L570 140.5 L570 147 Z" fill="#111"/>
+            <path d="M536 144.5 L552 143.2 L570 143.2 L570 144.5 Z" fill="#fff"/>
+          </g>
+        </g>
+      </defs>
+
+      <use href="#leftHalf"/>
+      <use href="#leftHalf" transform="translate(1140,0) scale(-1,1)"/>
+      <rect x="58" y="138" width="1024" height="4.5" fill="#111"/>
+      
+    </svg>
