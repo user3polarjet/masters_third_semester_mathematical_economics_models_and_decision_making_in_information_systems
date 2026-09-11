@@ -82,7 +82,7 @@
 
 #show figure.where(kind: table): it => {
   align(left)[
-    #it.supplement #context (it.counter.display(it.numbering)) — #it.caption.body
+    #it.supplement #context (it.counter.display(it.numbering)) #it.caption.body
   ]
   v(10pt, weak: true)
   align(center)[#it.body]
