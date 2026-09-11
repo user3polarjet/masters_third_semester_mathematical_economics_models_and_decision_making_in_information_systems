@@ -10,6 +10,8 @@ I have one or more PDF files that need to be converted to Markdown (.md, same ba
   4. Do not silently "fix" the source. If the PDF has an apparent typo, inconsistent spacing, or odd formatting (e.g. "chat" instead of "char", a malformed date like "018.08.2026"), carry it through unchanged in the .md. The goal is a faithful transcription, not a corrected one.
   5. Preserve document metadata exactly: title, version number, date, interface/protocol names.
   6. Write the result to <same-basename>.md next to the source PDF.
+  7. create a separate markdown per page
+  8. In the add concatanete those markdowns into single document ( if some table, or formula or other such element was split accorss pages, then merge them)
 
   After conversion — verify it:
   1. Re-read both the PDF and the newly written .md in full.

@@ -6,8 +6,8 @@ import asyncio
 SCRIPT_PATH = pathlib.Path(os.path.abspath(__file__))
 SCRIPT_DIR = SCRIPT_PATH.parent
 
-PDF_PATH = SCRIPT_DIR.parent / "ДОДАТКИ для виконання практичних робіт 2.1-2.3.pdf"
-BUILD_DIR = SCRIPT_DIR.parent / "build" /   'ДОДАТКИ для виконання практичних робіт 2.1-2.3'
+PDF_PATH = SCRIPT_DIR.parent / 'sources' / "ПРАКТИЧНА РОБОТА_4.pdf"
+BUILD_DIR = SCRIPT_DIR.parent / "build" /   'ПРАКТИЧНА РОБОТА_4'
 DPI = 150
 
 
