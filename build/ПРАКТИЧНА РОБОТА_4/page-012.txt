@@ -1,0 +1,22 @@
+Код на Python:
+import numpy as np
+from scipy.optimize import fsolve
+def func(x):
+p_a, p_b = x
+return [
+10.6 * p_a - 4.2 * p_b - 96 * p_a**2 + 19.39 * p_b**(4/3) + 12.8,
+5.8 * p_b - 7.8 * p_a + 19.2 * p_a**2 - 47.397 * p_b**(4/3) + 14.4,
+]
+# start from initial root (1, 1) and iteratively update it
+root = fsolve(func, np.array([1, 1]))
+print(root)
+print(np.isclose(func(root), [0.0, 0.0]))
+Вивід програми:
+
+Отже, знайдено наступні корені:
+𝑃𝐴 = 0.4934 та 𝑃𝐵 = 0.4845.
+Тоді на основі цін обрахуємо виробництво і споживання благ:
+
+А також доходи і витрати домашніх господарств:
+
+
