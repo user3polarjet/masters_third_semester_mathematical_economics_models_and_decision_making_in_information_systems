@@ -7,8 +7,8 @@ import asyncio
 SCRIPT_PATH = pathlib.Path(os.path.abspath(__file__))
 SCRIPT_DIR = SCRIPT_PATH.parent
 
-PDF_PATH = SCRIPT_DIR.parent / 'sources' / "ПРАКТИЧНА РОБОТА_4.pdf"
-BUILD_DIR = SCRIPT_DIR.parent / "build" /   'ПРАКТИЧНА РОБОТА_4'
+PDF_PATH = SCRIPT_DIR.parent / 'pdf_sources' / 'sources' / "BA_in_IT.pdf"
+BUILD_DIR = SCRIPT_DIR.parent / "build" /   'BA_in_IT'
 
 
 async def page_count(pdf_path: pathlib.Path):

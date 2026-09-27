@@ -1,0 +1,55 @@
+11.
+
+Wiegers K., Hokanson C. Software Requirements Essentials: Core
+
+Practices for Successful Business Analysis. – Boston : Addison-Wesley Professional,
+2023. – 208 p. – ISBN 978-0-13-819028-6.
+12.
+
+Gobov D., Zuieva O. Software Quality Attributes in Requirements
+
+Engineering // International Journal of Information Technology and Computer Science.
+– 2025. – Vol. 17, no. 4. – P. 38–48. – DOI: 10.5815/ijitcs.2025.04.04.
+13.
+
+Gobov D. Practical Study on Software Requirements Specification and
+
+Modelling Techniques // International Journal of Computing. – 2023. – Vol. 22, no. 1.
+– P. 78–86. – DOI: 10.47839/ijc.22.1.2882.
+14.
+
+Гобов Д., Зуєва О. Identifying the dependencies between IT project
+
+context and business analysis document content // Сучасний стан наукових
+досліджень та технологій в промисловості. – 2023. – № 2 (24). – С. 39–53. – DOI:
+10.30837/itssi.2023.24.039.
+15.
+
+Miller R. E. The Quest for Software Requirements: Probing Questions to
+
+Bring Nonfunctional Requirements Into Focus; Proven Techniques to Get the Right
+Stakeholder Involvement. – Oconomowoc, WI : MavenMark Books, 2009. – 327 p. –
+ISBN 978-1-59598-067-0.
+16.
+
+Gobov D., Sokolovskiy N. An Association Rule Mining for Selection
+
+Requirement Elicitation and Analysis Techniques in IT Projects // In: Jarzębowicz A.,
+Luković I., Przybyłek A., Staroń M., Ahmad M. O., Ochodek M. (eds.) Software,
+System, and Service Engineering. Lecture Notes in Business Information Processing,
+vol. 499. – Cham : Springer, 2024. – DOI: 10.1007/978-3-031-51075-5_4.
+17.
+
+International Institute of Business Analysis. BABOK® Guide Glossary:
+
+Ukrainian Translation [Електронний ресурс]. – Режим доступу:
+https://www.iiba.org/globalassets/standards-and-resources/glossary/files/babok-v3glossary-ukrainian.pdf (дата звернення: 01.08.2025).
+18.
+
+International Institute of Business Analysis. The Business Analysis Standard.
+
+Version 1.0. – Ontario, Canada: International Institute of Business Analysis, 2025. – 54
+р. – ISBN 978-1927584378.
+101
+
+

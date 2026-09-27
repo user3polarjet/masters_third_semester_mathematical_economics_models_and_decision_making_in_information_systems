@@ -1,0 +1,61 @@
+СПИСОК ЛІТЕРАТУРИ
+1.
+
+Silver B. BPMN Method and Style, 2nd Edition, with BPMN
+
+Implementer’s Guide: A Structured Approach for Business Process Modeling and
+Implementation Using BPMN 2.0. – Aptos, CA : Cody-Cassidy Press, 2011. – xii, 269
+p. – ISBN 978-0982368114.
+2.
+
+Fowler M. UML Distilled: A Brief Guide to the Standard Object Modeling
+
+Language (3rd Edition) (The Addison-Wesley Object Technology Series) /
+Martin Fowler. – 3rd ed. – [S. l.] : Addison-Wesley Professional, 2003. – 208 p.
+3.
+
+International Institute of Business Analysis. A Guide to the Business
+
+Analysis Body of Knowledge (BABOK® Guide). Version 3.0. – Toronto : International
+Institute of Business Analysis, 2015. – 504 р. – ISBN 978-1-927584-03-3.
+4.
+
+Project Management Institute. The PMI Guide to Business Analysis. 1st ed.
+
+– Newtown Square, PA : Project Management Institute, 2018. – 444 p. – ISBN 9781628251982.
+5.
+
+Pohl K. Requirements Engineering: Fundamentals, Principles, and
+
+Techniques: Second edition. – [S.l.] : Springer Publishing Company, 2025. – 907 p. –
+ISBN 978-3662692042.
+6.
+
+Paul D., et al. Business Analysis. 3rd ed. – [S.l.] : BCS, The Chartered
+
+Institute for IT, 2014. – 308 p.
+7.
+
+Paul D., et al. Business Analysis Techniques: 99 Essential Tools for
+
+Success. 2nd ed. – [S.l.] : BCS, The Chartered Institute for IT, 2014. – 344 p.
+8.
+
+Wiegers K., Beatty J. Software Requirements. 3rd ed. – [S.l.] : Pearson
+
+Education, 2013.
+9.
+
+Gobov D., Yanchuk V. Network Analysis Application to Analyze the
+
+Activities and Artifacts in the Core Business Analysis Cycle // 2021 2nd International
+Informatics and Software Engineering Conference (IISEC). – IEEE, 2021. – P. 1–6. –
+DOI: 10.1109/iisec54230.2021.9672373.
+10.
+
+Cockburn A. Writing Effective Use Cases. – Boston : Addison-Wesley,
+
+2000. – 304 p. – ISBN 0-201-70225-8.
+100
+
+
